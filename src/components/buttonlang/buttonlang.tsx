@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import "./buttonlang.scss";
 
 const Buttonlang = () => {
-  const { t, i18n } = useTranslation();
-  const [lang, setLang] = useState("en");
+  const { i18n } = useTranslation();
+  const [lang, setLang] = useState<string>("en");
 
   const handleChange = (value: string) => {
     i18n.changeLanguage(value);
@@ -14,7 +14,6 @@ const Buttonlang = () => {
 
   useEffect(() => {
     i18n.changeLanguage(lang);
-    console.log("lang", lang);
   }, [lang]);
 
   return (

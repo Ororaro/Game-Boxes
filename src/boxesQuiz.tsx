@@ -11,7 +11,7 @@ interface DataItem {
 }
 
 const BoxesQuiz = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const mockShape1: DataItem[] = [
     {
@@ -112,17 +112,17 @@ const BoxesQuiz = () => {
   const moveItem = (direction: "left" | "right") => {
     if (direction === "left") {
       const newBoxes = [...boxes];
-      const frontBox = newBoxes.shift(); // Remove the first box
+      const frontBox = newBoxes.shift();
       if (frontBox) {
-        newBoxes.push(frontBox); // Push the removed box to the end
+        newBoxes.push(frontBox);
         setBoxes(newBoxes);
       }
     }
     if (direction === "right") {
       const newBoxes = [...boxes];
-      const lastBox = newBoxes.pop(); // Remove the last box
+      const lastBox = newBoxes.pop();
       if (lastBox) {
-        newBoxes.unshift(lastBox); // Push the removed box to the front
+        newBoxes.unshift(lastBox);
         setBoxes(newBoxes);
       }
     }
@@ -143,7 +143,6 @@ const BoxesQuiz = () => {
               onClick={() => moveItem("left")}
             >
               <div id="triangle-left">
-                {" "}
                 <div className="titleBadge">{t("greeting.moveShape")}</div>
               </div>
             </div>
@@ -183,8 +182,8 @@ const BoxesQuiz = () => {
           {firstRow.map((item, index) => (
             <>
               <Col key={item.id} md={6} onClick={() => shuffleArray()}>
-                <div className="background-box" style={{ cursor: "pointer" }}>
-                  <div style={item.style}></div>
+                <div className="background-box-random" style={{ cursor: "pointer" }}>
+                  <div className={`shape ${item.term}`} style={item.style}></div>
                 </div>
               </Col>
             </>
@@ -194,8 +193,8 @@ const BoxesQuiz = () => {
           {secondRow.map((item, index) => (
             <>
               <Col key={item.id} md={6} onClick={() => shuffleArray()}>
-                <div className="background-box" style={{ cursor: "pointer" }}>
-                  <div style={item.style}></div>
+                <div className="background-box-random" style={{ cursor: "pointer" }}>
+                  <div className={`shape ${item.term}`} style={item.style}></div>
                 </div>
               </Col>
             </>

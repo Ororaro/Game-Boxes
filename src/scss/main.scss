@@ -1,0 +1,95 @@
+body {
+  background: linear-gradient(to right,#6eda78, #ffa200);
+}
+
+.container {
+   display: block;
+   padding: 0px 10rem;
+}
+
+.layout {
+  display: block;
+  padding: 18rem 10rem;
+}
+
+.background-box {
+  position: relative;
+  background-color: #fff;
+  margin: 10px;
+  padding: 2rem;
+  border-radius: 8px;
+}
+.background-box:hover {
+  transition: 0.3s;
+  background-color: #ffa200;
+}
+
+.background-box-pair {
+  position: relative;
+  background-color: #ffff;
+  margin: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.background-box-pair:hover {
+  transition: 0.3s;
+  background-color: #ffa200;
+}
+#triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid gray;
+  border-bottom: 50px solid transparent;
+  margin: 0 auto;
+}
+
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid gray;
+  border-bottom: 50px solid transparent;
+  margin: 0 auto;
+}
+
+#triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid gray;
+  margin-right: 12rem;
+}
+
+#triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid gray;
+}
+
+.titleBadge {
+  position: absolute;
+  bottom: -10px;
+  left: 40%;
+  background-color: #6eda78;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+.titleBadgePair {
+  position: absolute;
+  bottom: -10px;
+  left: 43%;
+  background-color: #6eda78;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  z-index: 999;
+}
